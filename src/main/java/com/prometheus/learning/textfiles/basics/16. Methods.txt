@@ -1,0 +1,37 @@
+A Java method is a collection of statements that are grouped together to perform an operation.
+modifier returnType nameOfMethod (Parameter List) {
+   // method body
+}
+The method signature consists of the method name and the parameter list.
+The void keyword allows us to create methods which do not return a value. 
+
+While working under calling process, arguments is to be passed. 
+These should be in the same order as their respective parameters in the method specification. Parameters can be passed by value or by reference.
+
+When a class has two or more methods by the same name but different parameters, it is known as method overloading.
+
+A command-line argument is the information that directly follows the program's name on the command line when it is executed. 
+To access the command-line arguments inside a Java program is quite easy. They are stored as strings in the String array passed to main( ).
+
+A constructor initializes an object when it is created. It has the same name as its class and is syntactically similar to a method. 
+However, constructors have no explicit return type.
+
+Java automatically provides a default constructor that initializes all member variables to zero. 
+However, once you define your own constructor, the default constructor is no longer used.
+
+"this" is a keyword in Java which is used as a reference to the object of the current class, with in an instance method or a constructor. 
+Using this you can refer the members of a class such as constructors, variables and methods. 
+"this" keyword is used to differentiate the instance variables from local variables if they have same names, within a constructor or a method.
+
+public void method(double ... numbers) { 
+    \\Argument is an array of numbers, separated by commas
+}
+
+It is possible to define a method that will be called just before an object's final destruction by the garbage collector. 
+This method is called finalize( ), and it can be used to ensure that an object terminates cleanly.
+
+protected void finalize( ) {
+   // finalization code here
+}
+
+Here, the keyword protected is a specifier that prevents access to finalize( ) by code defined outside its class.

@@ -1,0 +1,20 @@
+Inheritance is a process in which one class (subclass) inherits all fields and methods of another class (superclass),
+except private fields and methods.
+
+Subclass extends Superclass
+
+A subclass can extend only one superclass, but implement many interfaces. A superclass can have many subclasses.
+
+A default constructor is a constructor without parameters, though body can be defined.
+
+Superclass default constructor is always invoked no matter the type, starting from the class in the top of the hierarchy.
+
+If superclass has parametrized constructor but no explicit default constructor, all the constructors
+in a subclass must invoke any of the superclass parametrized constructor using super() as the first thing.
+
+
+
+
+
+
+

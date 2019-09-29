@@ -1,0 +1,11 @@
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
+In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.
+
+BENEFITS OF ENCAPSULATION
+
+The fields of a class can be made read-only or write-only.
+
+A class can have total control over what is stored in its fields.
+
+The users of a class do not know how the class stores its data. A class can change the data type of a field and users of the class do not need to change any of their code.
+

@@ -1,0 +1,29 @@
+
+The Superclass reference variable can hold the subclass object, but using that variable you can access only the members of the superclass, 
+so to access the members of both classes it is recommended to always create reference variable to the subclass.
+
+If a class is inheriting the properties of another class, the subclass automatically acquires the default constructor of the superclass. 
+But if you want to call a parameterized constructor of the superclass, you need to use the super keyword.
+
+With the use of the extends keyword, the subclasses will be able to inherit all the properties of the superclass except for the private properties of the superclass.
+
+In Object-Oriented feature, the users do not need to bother about which object is doing the real work.
+
+Java does not support multiple inheritance. However, a class can implement one or more interfaces.
+
+
+Every class has at least one constructor. If no constructors are excplicitly defined, an implicit default constructor is used,
+but if a class has explicit constructor defined, then the implicit default constructor cant be used anymore.
+
+Every constructor of a class must invoke at least one of its superclass constructors.
+Every constructor will implicitly invoke its superclass's default constructor, but when no default
+constructor is present in a superclass, then one of its other constructors must be invoked explicitly.
+
+In a superclass-subclass hierarchy this means that the constructor calls begin at the object's initializing constructor 
+and finish at the top class's constructor, but the execution of statements inside constructors will begin at the top
+of the class hierarchy and finish at the bottom constructor.
+
+Invoking a constructor of a superclass or the same class, the corresponding calls 'super' and 'this' must be 
+the first thing in a current constructor, which concludes that super() and this() cannot be used in a same constructor.
+
+

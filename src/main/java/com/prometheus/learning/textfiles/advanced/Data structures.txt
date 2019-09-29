@@ -1,0 +1,29 @@
+Enumeration - The Enumeration interface defines the methods by which you can enumerate (obtain one at a time) the elements in a collection of objects.
+boolean hasMoreElements(), Object nextElement();  Use Iterator instead of Enumeration.
+
+BitSet - creates a special type of array that holds bit values, which are set and called by index, and contains a boolean value true or false. 
+BitSet is useful of dealing with sets of booleans.
+
+Vector - implements a dynamic array which can change its size. It is similar to ArrayList, but with two differences:
+Vector is synchronized. Vector contains many legacy methods that are not part of the collections framework.
+Vector proves to be very useful if you don't know the size of the array in advance or you just need one that can change sizes over the lifetime of a program.
+
+Stack - is a subclass of Vector that implements a standard last-in, first-out (LIFO) stack, which means that the last added element will me removed first.
+peek() - returns first element, pop() - removes and returns first element, push() - adds the element on top of the Stack.
+
+Dictionary - The Dictionary class is an abstract class that defines a data structure for mapping keys to values.
+This is useful in cases where you want to be able to access data via a particular key rather than an integer index.
+The Dictionary class is obsolete, use Map interface instead.
+
+Hashtable - implements the Map interface. It is similar to a HashMap, but is synchronized. 
+Like HashMap, Hashtable stores key/value pairs in a hash table. When using a Hashtable, you specify an object that is used as a key, and the value that you want linked to that key. 
+The key is then hashed, and the resulting hash code is used as the index at which the value is stored within the table.
+get(Object key), Enumeration keys(), Enumeration elements(), remove(Object key), put(Object key, Object value).
+
+Properties - is a subclass of Hashtable. It is used to maintain lists of values in which the key is a String and the value is also a String.
+The Properties class is used by many other Java classes. For example, it is the type of object returned by System.getProperties( ) when obtaining environmental values.
+String getProperty(String key), Enumeration propertyNames(), Object setProperty(String key, String value).
+
+
+
+

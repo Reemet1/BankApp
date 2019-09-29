@@ -1,0 +1,74 @@
+A multi-threaded program contains two or more parts that can run concurrently and each part can handle a different task at the same time making 
+optimal use of the available resources specially when your computer has multiple CPUs.
+Multi-threading enables you to write in a way where multiple activities can proceed concurrently in the same program.
+
+Life Cycle of a Thread:
+
+New - thread begins its life cycle in the new state. It remains in this state until the program starts the thread. It is also referred to as the born thread.
+
+Runnable - after a newly born thread is started, the thread becomes runnable. A thread in this state is considered to be executing its task.
+
+Waiting - sometimes, a thread transitions to the waiting state while the thread waits for another thread to perform a task. 
+A thread transitions back to the runnable state only when another thread signals the waiting thread to continue executing.
+
+Timed waiting - a runnable thread can enter the timed waiting state for a specified interval of time. 
+A thread in this state transitions back to the runnable state when that time interval expires or when the event it is waiting for occurs.
+
+Terminated (dead) - a runnable thread enters the terminated state when it completes its task or otherwise terminates.
+
+Thread Priorities:
+
+Every Java thread has a priority that helps the operating system determine the order in which threads are scheduled.
+Java thread priorities are in the range between MIN_PRIORITY (a constant of 1) and MAX_PRIORITY (a constant of 10).
+By default, every thread is given priority NORM_PRIORITY (a constant of 5).
+Threads with higher priority are more important to a program and should be allocated processor time before lower-priority threads. 
+However, thread priorities cannot guarantee the order in which threads execute and are very much platform dependent.
+
+Two ways for creating a thread is by extending a Thread class or implementing a Runnable interface.
+In both cases overriding the run() method is needed, as the thread will begin the execution from there.
+
+Thread methods: start(), run(), setName(), setPriority(), join(), interrupt(), isAlive().
+Thread static methods: yield(), sleep(), holdsLock(Object lock), currentThread(), dumpStack().
+
+
+Synchronization:
+
+When we start two or more threads within a program, there may be a situation when multiple threads try to access the same resource 
+and finally they can produce unforeseen result due to concurrency issues. So there is a need to synchronize the action of multiple 
+threads and make sure that only one thread can access the resource at a given point in time. This is implemented using a concept called monitors. 
+Each object in Java is associated with a monitor, which a thread can lock or unlock. Only one thread at a time may hold a lock on a monitor.
+synchronized(objectMonitor) { protected code }
+
+Interthread Communication:
+
+There are three simple methods and a little trick which makes thread communication possible:
+wait() - causes the current thread to wait until another thread invokes the notify()
+notify() - wakes up a single thread waiting on this object's monitor.
+notifyAll() - wakes up all threads that called wait() on the same object.
+
+These methods have been implemented as final methods in Object, so they are available in all the classes. All three methods can be called only from within a synchronized context.
+
+Handling a Deadlock:
+
+Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. 
+Deadlock occurs when multiple threads need the same locks but obtain them in different order. 
+A Java multithreaded program may suffer from the deadlock condition because the synchronized keyword causes 
+the executing thread to block while waiting for the lock, or monitor, associated with the specified object.
+
+Example: Thread1 { synchronized(lock1) ... synchronized(lock2) }  ; Thread2 { synchronized(lock2) ... synchronized(lock1) }
+Deadlock because Thread1 waits for lock2 and Thread2 waits for lock1. 
+Solution: Thread1 { synchronized(lock1) ... synchronized(lock2) }  ; Thread2 { synchronized(lock1) ... synchronized(lock2) }
+
+Major Thread Operations:
+
+suspend() - puts a thread in the suspended state and can be resumed using the resume() method.
+stop() - stops a thread completely
+resume() - resumes a suspended thread
+wait() - causes the current thread to wait until another thread invokes the notify()
+notify() - wakes up a single thread waiting on this object's monitor
+
+Be aware that the latest versions of Java has deprecated the usage of suspend( ), resume( ), and stop( ) methods and so you need to use available alternatives.
+
+
+
+

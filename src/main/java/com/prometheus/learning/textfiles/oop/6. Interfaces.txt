@@ -1,0 +1,50 @@
+An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods.
+Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types. 
+Method bodies exist only for default methods and static methods.
+
+INTERFACE RULES
+
+You cannot instantiate an interface.
+
+An interface does not contain any constructors.
+
+All of the methods in an interface are abstract.
+
+An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both static and final.
+
+An interface is not extended by a class; it is implemented by a class.
+
+An interface can extend multiple interfaces.
+
+A class can implement more than one interface at a time.
+
+A class can extend only one class, but implement many interfaces.
+
+An interface can extend another interface, in a similar way as a class can extend another class.
+
+
+INTERFACE PROPERTIES
+
+An interface is implicitly abstract. You do not need to use the abstract keyword while declaring an interface.
+
+Each method in an interface is also implicitly abstract, so the abstract keyword is not needed.
+
+Methods and fields in an interface are implicitly public.
+
+
+When a class implements an interface, you can think of the class as signing a contract, agreeing to perform the specific behaviors of the interface. 
+If a class does not perform all the behaviors of the interface, the class must declare itself as abstract.
+
+OVERRIDING RULES
+
+Checked exceptions should not be declared on implementation methods other than the ones declared by the interface method or subclasses of those declared by the interface method.
+
+The signature of the interface method and the same return type or subtype should be maintained when overriding the methods.
+
+
+An interface with no methods in it is referred to as a tagging interface. There are two basic design purposes of tagging interfaces:
+
+1) Adds a common parent
+2) Adds a data type to a class
+
+An implementation class itself can be abstract and if so, interface methods need not be implemented.

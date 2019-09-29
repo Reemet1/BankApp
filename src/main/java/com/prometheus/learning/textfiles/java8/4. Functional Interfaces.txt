@@ -1,0 +1,45 @@
+Functional interfaces have a single functionality to exhibit. For example, a Comparable interface with a single method ‘compareTo’ is used for comparison purpose. 
+Java 8 has defined a lot of functional interfaces to be used extensively in lambda expressions. Following is the list of functional interfaces defined in java.util.Function package.
+
+Functional interfaces provide target types for lambda expressions and method references. 
+Each functional interface has a single abstract method, called the functional method for that functional interface, to which the lambda expression's 
+parameter and return types are matched or adapted. Functional interfaces can provide a target type in multiple contexts, such as assignment context, method invocation, or cast context.
+
+BiConsumer<T,U> - Represents an operation that accepts two input arguments and returns no result.
+BiFunction<T,U,R> - Represents a function that accepts two arguments and produces a result.
+BinaryOperator<T> - Represents an operation upon two operands of the same type, producing a result of the same type as the operands.
+BiPredicate<T, U> - Represents a predicate (boolean-valued function) of two arguments.
+
+
+BooleanSupplier - Represents a supplier of boolean-valued results.
+BinaryOperator<T> - Represents an operation upon two operands of the same type, producing a result of the same type as the operands.
+Consumer<T> - Represents an operation that accepts a single input argument and returns no result.
+Function<T,R> - Represents a function that accepts one argument and produces a result.
+Predicate<T> - Represents a predicate (boolean-valued function) of one argument.
+Supplier<T> - Represents a supplier of results.
+
+BiConsumer<T,U> - Represents an operation that accepts two input arguments and returns no result.
+BiFunction<T,U,R> BiPredicate<T,U>
+
+DoubleConsumer - Represents an operation that accepts a single double-valued argument and returns no result.
+DoubleFunction, DoubleSupplier, DoublePredicate, IntConsumer, ..., LongConsumer, ...
+DoubleToLongFunction - Represents a function that accepts a double-valued argument and produces an int-valued result. 
+etc...
+
+Example of Predicate functional interface:
+
+List<Integer> list = new ArrayList(Arrays.asList(1,2,3,4,5,6,7,8,9));
+
+printList(list, n -> true); prints all elements of list
+printList(list, n % 2 == 0); prints 2, 4, 6, 8
+printList(list, n > 4); prints 5,6,7,8,9
+
+public void printList(List<Integer> list, Predicate<Integer> predicate) {
+	for (Integer n : list) {
+		if(predicate.test(n)){
+			System.out.print(n + " ");
+		}
+	}
+}
+
+

@@ -1,0 +1,43 @@
+Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space 
+in the memory.
+
+There are two data types available in Java:
+
+Primitive Data Types - 
+byte - 8-bit signed two's complement integer, used to save space in large arrays, mainly in place of integers. Default value is 0.
+short - 16-bit signed two's complement integer, used to save memory as byte data type. Default value is 0.
+int - 32-bit signed two's complement integer. generally used as the default data type for integral values unless there is a concern about memory. Default value is 0.
+long - 64-bit signed two's complement integer, used when a wider range than int is needed. Default value is 0L.
+float - single-precision 32-bit IEEE 754 floating point, mainly used to save memory in large arrays of floating point numbers. Default value is 0.0f.
+double - double-precision 64-bit IEEE 754 floating point, generally used as the default data type for decimal values.
+Double data type should never be used for precise values such as currency. Default value is 0.0d.
+boolean - represents one bit of information. This data type is used for simple flags that track true/false conditions. Default value is false
+char - single 16-bit Unicode character, used to store any character. Example '\u0000'.
+
+Reference Datatypes:
+Reference variables are created using defined constructors of the classes. They are used to access objects. These variables are declared 
+to be of a specific type that cannot be changed.
+Class objects and various type of array variables come under reference datatype.
+Default value of any reference variable is null.
+A reference variable can be used to refer any object of the declared type or any compatible type.
+
+Java Literals:
+A literal is a source code representation of a fixed value. They are represented directly in the code without any computation.
+Literals can be assigned to any primitive type variable: ex byte a = 62; char b = 'A';
+Prefix 0 is used to indicate octal, and prefix 0x indicates hexadecimal when using these number systems for literals: ex int octal = 0144; 
+int hexa = 0x64;
+String literals in Java are specified like they are in most other languages by enclosing a sequence of characters between a pair of 
+double quotes.
+String and char types of literals can contain any Unicode characters: ex char a = '\u0001'; String b = "\u0002";
+Special escape sequences for String and char literals: \n \b \s \" \' \\ \ddd \uxxxx
+
+\t	Insert a tab in the text at this point.
+\b	Insert a backspace in the text at this point.
+\n	Insert a newline in the text at this point.
+\r	Insert a carriage return in the text at this point.
+\f	Insert a formfeed in the text at this point.
+\'	Insert a single quote character in the text at this point.
+\"	Insert a double quote character in the text at this point.
+\\	Insert a backslash character in the text at this point.
+
+ 

@@ -1,0 +1,9 @@
+Java language supports 3 types of comments: /* text */  //text  /** documentation */
+
+Javadoc is a tool which comes with JDK and it is used for generating Java code documentation in HTML format from Java source code, which requires documentation in a predefined format.
+You can include  HTML tags inside the description part.
+
+javaDoc tags:
+
+@author, {@code}, {@docRoot}, @deprecated, @exception, {@inheritDoc}, {@link}, {@linkplain}, @param, @return, @see,
+@serial, @serialData, @serialField, @since, @throws, {@value}, @version

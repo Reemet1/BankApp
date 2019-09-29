@@ -1,0 +1,9 @@
+Method references help to point to methods by their names. A method reference is described using :: (double colon) symbol.
+A method reference can be used to point the following types of methods: Static methods, Instance methods, Constructors (ex. TreeSet::new)
+
+Example:
+
+list.forEach(System.out::print);
+
+print method is applied for each element of the list.
+

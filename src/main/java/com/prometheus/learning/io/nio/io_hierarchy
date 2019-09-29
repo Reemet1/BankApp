@@ -1,0 +1,25 @@
+
+
+InputStream - input stream of bytes
+-- FileInputStream -  obtains input bytes from a file in a file system
+-- FilterInputStream - contains some other input stream, which it uses as its basic source of data,
+                       possibly transforming the data along the way or providing additional functionality.
+-- -- DataInputStream - lets an application read primitive Java data types from an underlying input stream in
+                        a machine-independent way
+
+OutputStream - output stream of bytes
+-- FileOutputStream - output stream for writing data to a File or to a FileDescriptor
+-- FilterOutptStream -  transforming the data along the way or providing additional functionality
+-- -- DataOutputStream - lets an application write primitive Java data types to an output stream in a portable way
+
+Reader - input stream of characters
+-- BufferedInputStream - buffer for character-input
+-- InputStreamReader - reads bytes and decodes them into characters
+-- -- FileReader - convenience class for reading character files
+
+Writer - output stream of characters
+-- PrintWriter - prints formatted representations of objects to a text-output stream.
+-- BufferedOutputStream - buffer for character-output
+-- OutputStreamWriter - converts input characters into bytes and writes them out
+-- -- FileWriter - convenience class for writing character files
+

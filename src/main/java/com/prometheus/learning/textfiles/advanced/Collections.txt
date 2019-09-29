@@ -1,0 +1,67 @@
+Java provided ad hoc classes such as Dictionary, Vector, Stack, and Properties to store and manipulate groups of objects. 
+Although these classes were quite useful, they lacked a central, unifying theme.
+
+The Collections framework was designed to meet several goals, such as:
+The framework had to be high-performance. The implementations for the fundamental collections (dynamic arrays, linked lists, trees, and hashtables) were to be highly efficient.
+The framework had to allow different types of collections to work in a similar manner and with a high degree of interoperability.
+The framework had to extend and/or adapt a collection easily.
+
+All collections frameworks contain the following:
+Interfaces - these are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.
+Implementations i.e Classes - these are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.
+Algorithms - these are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces.
+The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.
+Although maps are not collections in the proper use of the term, but they are fully integrated with collections.
+
+THE COLLECTION ALGORITHMS
+
+The collections framework defines several algorithms that can be applied to collections and maps. These algorithms are defined as static methods within the Collections class.
+Several of the methods can throw a ClassCastException, which occurs when an attempt is made to compare incompatible types, 
+or an UnsupportedOperationException, which occurs when an attempt is made to modify an unmodifiable collection.
+
+Methods: copy(List, List), max(Collection), max(Collection, Comparator), min(Collection), min(Collection, Comparator), sort(List), shuffle(List), reverse(List), synchronized...(List)
+
+
+How to use an Iterator?
+
+Often, you will want to cycle through the elements in a collection. For example, you might want to display each element.
+The easiest way to do this is to employ an iterator, which is an object that implements either the Iterator or the ListIterator interface.
+
+Using an Iterator is better than using enhanced for loop if you want to avoid ConcurrentModificationException.
+
+In general, to use an iterator to cycle through the contents of a collection, follow these steps:
+
+Obtain an iterator to the start of the collection by calling the collection's iterator( ) method.
+Set up a loop that makes a call to hasNext( ). Have the loop iterate as long as hasNext( ) returns true.
+Within the loop, obtain each element by calling next().
+
+Iterator methods: boolean hasNext(), Object next(), remove().
+ListIterator methods: similar to Iterator methods,  void set(Obj) the currently iterated object will be replaced by the object specified by the parameter.
+
+
+How to use a Comparator?
+
+Comparator defines precisely what sorted order means. The Comparator interface defines two methods: compare() and equals().
+
+Comparable - a comparable object is capable of comparing itself with another object.
+Comparable - compareTo(), Collections.sort(list), can sort based on one field only, natural ordering
+
+Comparator - a comparator object is capable of comparing two different objects. The class is not comparing its instances, but some other class’s instances.
+Comparator - compare(), equals(), Collections.sort(list, Comparator), can sort based on multiple fields, different comparators can be inner classes.
+
+To compare objects by certain property, do the following:
+
+Implement the Comparable<Class> with the class which instances you wish to compare.
+Override the compareTo() method to to return -1 or +1 depending on the objects' properties compared.
+Apply Collections.sort(list) or Collections.sort(list, new Instance()) to sort the elements of the list according to the comparator.
+
+
+Summary:
+The Java collections framework gives the programmer access to prepackaged data structures as well as to algorithms for manipulating them.
+A collection is an object that can hold references to other objects. The collection interfaces declare the operations that can be performed on each type of collection.
+The classes and interfaces of the collections framework are in package java.util.
+
+
+
+
+

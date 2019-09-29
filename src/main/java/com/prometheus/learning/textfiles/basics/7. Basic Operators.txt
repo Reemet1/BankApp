@@ -1,0 +1,37 @@
+Java provides a rich set of operators to manipulate variables. We can divide all the Java operators into the following groups:
+
+Arithmetic Operators: + - * / % ++ --
+
+Relational Operators: == != > < >= <= 
+
+Bitwise Operators: a = 0011 1100; b = 0000 1101;   a&b a|b a^b ~a  << >> >>>
+
+Logical Operators: && || !
+
+Assignment Operators: = += -= *= /= %= >>= <<= &= |= ^= 
+
+Misc Operators: 
+
+Conditional Operator (? :) aka Ternary operator - variable x = (expression) ? value if true : value is false;
+
+instanceOf Operator - This operator is used only for object reference variables. The operator checks whether the object is of a particular type.
+Example: (Object reference variable) instanceOf (class/interface type)
+This operator will still return true, if the object being compared is the assignment compatible with the type on the right. 
+
+
+Precedence of Java operators
+Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others.
+
+Postfix	          () [] . (dot operator)
+Unary	          ~ ! -- ++
+Multiplicative	  * /
+Additive	  + -
+Shift	          >>> >>> <<
+Relational	  >> >= < <=
+Equality	  == !=
+Bitwise           & ^ | 
+Logical           && ||
+Conditional       : ?
+Assignment        |= ^= &= <<= >>= %= /= *= -= += =
+
+

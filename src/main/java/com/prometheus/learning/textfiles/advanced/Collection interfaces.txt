@@ -1,0 +1,48 @@
+
+THE COLLECTION INTERFACES
+
+Collection interface - is the foundation upon which the collections framework is built. It declares the core methods that all collections will have. 
+Methods that all collection classes implement: add(Object), addAll(Collection), clear(), contains(Object), containsAll(Collection), equals(Object), 
+hashCode(), isEmpty(), Iterator iterator(), remove(Object), removeAll(Collection), retainAll(Collection), size(), Object[] toArray(), Object[] toArray(Object[])
+
+List interface - extends Collection and declares the behavior of a collection that stores a sequence of elements.
+Elements can be inserted or accessed by their position in the list, using a zero-based index.
+A list may contain duplicate elements.
+Several of the list methods will throw an UnsupportedOperationException if the collection cannot be modified, 
+and a ClassCastException is generated when one object is incompatible with another. 
+Some added methods: add(int index, Object obj), get(int index), indexOf(Object obj), ListIterator listIterator(), remove(Object), set(int index, Object obj), List subList(start, end)
+List interface is implemented by ArrayList, LinkedList, ...
+
+Set interface - is a Collection that cannot contain duplicate elements. It models the mathematical set abstraction.
+The Set interface uses only methods from the Collection interface, but adds restriction that duplicate elements are prohibited.
+The Set interface is implemented by HashSet, TreeSet, LinkedHashSet, ...
+
+SortedSet interface - extends Set and declares the behavior of a set sorted in an ascending order. Elements are ordered automatically. Comparator comparator() - returns comparator.
+
+Map interface - maps unique keys to values. A key is an object that you use to retrieve a value at a later date.
+Given a key and a value, you can store the value in a Map object. After the value is stored, you can retrieve it by using its key.
+Several methods throw a NoSuchElementException when no items exist in the invoking map.
+A ClassCastException is thrown when an object is incompatible with the elements in a map.
+A NullPointerException is thrown if an attempt is made to use a null object and null is not allowed in the map.
+An UnsupportedOperationException is thrown when an attempt is made to change an unmodifiable map.
+Methods: clear(), containsKey(), containsValue(), entrySet(), keySet(), get(), put(), remove(), Collection values().
+HashMap implements Map interface.
+
+Map.Entry interface - is an inner class of the Map interface, which enables to work with a map entry that is returned by the entrySet() method of the Map interface.
+Each of these set elements is a Map.Entry object. Methods: getKey(), getValue(), setValue(Object). entrySet -> Set -> Iterator -> Map.Entry e = Iterator.next() -> e.getValue().
+
+SortedMap interface - extends Map. It ensures that the entries are maintained in an ascending key order. Comparator comparator() - returns the invoking sorted map's comparator
+
+Enumeration interface - The Enumeration interface defines the methods by which you can enumerate (obtain one at a time) the elements in a collection of objects.
+boolean hasMoreElements(), Object nextElement();  Use Iterator instead of Enumeration.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+Polymorphism is the ability of an object to take on many forms, that means to be type compatible to more than one class.
+
+There are two distinct types:
+1 - Reference type, type of the reference variable
+2 - Object's type, type of the instiantiating class
+
+By default every object has the type of its own instantiating class and of class Object.
+
+An object admits a type of its instantiating class and any of its instantiating class's superclass regardless of the reference type.
+(subclassObject instanceOf SuperClass) == true.
+
+A reference variable can refer to any object of its declared type or any subtype of its declared type.
+
+The type of the reference variable would determine the methods that it can invoke on the object.
+That's because when dealing with variables of the same type, it is not guaranteed that all of the objects
+of this type could call the method that would be defined for example in just one of the subtype class.
+
+Virtual method - superclass method which the JVM checks before compiling, though subclass method of the same name is called.
+
+
+

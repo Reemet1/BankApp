@@ -1,0 +1,54 @@
+When we consider a Java program, it can be defined as a collection of objects that communicate via invoking each other's methods.
+
+Object - Objects have states and behaviors.
+Class - A class can be defined as a template/blueprint that describes the behavior/state that the object of its type supports.
+Method - A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is 
+manipulated and all the actions are executed.
+Instance variable - Each object has its unique set of instance variables. 
+An object's state is created by the values assigned to these instance variables.
+
+Basic Syntax Rules:
+
+Case Sensitivity - Java is case sensitive, which means identifier Hello and hello would have different meaning in Java.
+
+Class Names - For all class names the first letter should be in Upper Case. If several words are used to form a name of the class, 
+each inner word's first letter should be in Upper Case.
+
+Method Names - All method names should start with a Lower Case letter. If several words are used to form the name of the method, 
+then each inner word's first letter should be in Upper Case.
+
+Program File Name - Name of the program file should exactly match the class name.
+
+public static void main(String[] args)
+Java program processing starts from the main() method which is a mandatory part of every Java program.
+
+Java Identifiers:
+All Java components require names. Names used for classes, variables, and methods are called identifiers.
+
+Java Modifiers:
+Access Modifiers - default, public, protected, private
+Non-Access Modifiers - final, abstract, strictfp
+
+Java Variables:
+Local variables, class (static) variables, instance (non-static) variables.
+
+Java Arrays:
+Arrays are objects that store multiple variables of the same type. However, an array itself is an object on the heap.
+
+Java Enums:
+Enums restrict a variable to have one of only a few predefined values. The values in this enumerated list are called enums.
+
+Java Keywords:
+abstract, assert, boolean, break, byte, case, catch, char, class, const, continue, default,
+do, double, else, enum, extends, final, finally, float, for, goto, if, implements,
+import, instanceof, int, interface, long, native, new,	package, private, protected, public, return,
+short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, try, void, volatile, while
+
+Comments in Java:
+//One line comment   /*Multiline comment */   /** Documentation */
+
+Inheritance - subclass inherits methods and fields from the superclass.
+
+Interface - an interface can be defined as a contract between objects on how to communicate with each other. Interfaces play a vital role 
+when it comes to the concept of inheritance.
+An interface defines the methods, a deriving class (subclass) should use. But the implementation of the methods is totally up to the subclass.

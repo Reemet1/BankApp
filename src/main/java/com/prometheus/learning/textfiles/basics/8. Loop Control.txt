@@ -1,0 +1,32 @@
+A loop statement allows us to execute a statement or group of statements multiple times.
+
+A while loop statement in Java programming language repeatedly executes a target statement as long as a given condition is true.
+
+A for loop is a repetition control structure that allows you to efficiently write a loop that needs to be executed a specific number of times.
+for(initialization; Boolean_expression; update) {
+   // Statements
+}
+
+A do...while loop is similar to a while loop, except that a do...while loop is guaranteed to execute at least one time.
+do {
+   // Statements
+}while(Boolean_expression);
+
+Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created 
+in that scope are destroyed.
+When the break statement is encountered inside a loop, the loop is immediately terminated and the program control resumes at the next 
+statement following the loop.
+It can be used to terminate a case in the switch statement.
+
+The continue keyword can be used in any of the loop control structures. It causes the loop to immediately jump to the next iteration of the loop.
+In a for loop, the continue keyword causes control to immediately jump to the update statement.
+In a while loop or do/while loop, control immediately jumps to the Boolean expression.
+
+Enhances for-loop is used to iterate over an array 
+for(declaration : expression) {
+   // Statements
+}
+
+for(Type elem : elements) {
+   // Statements
+}

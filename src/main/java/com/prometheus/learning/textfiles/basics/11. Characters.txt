@@ -1,0 +1,22 @@
+Normally, when we work with characters, we use primitive data types char.
+However in development, we come across situations where we need to use objects instead of primitive data types. 
+In order to achieve this, Java provides wrapper class Character for primitive data type char.
+
+char ch = 'a';
+char uniChar = '\u039A';
+char[] charArray = {'a', 'b', 'c'};
+
+If you pass a primitive char into a method that expects an object, the compiler automatically converts the char to a Character for you.
+This feature is called autoboxing or unboxing, if the conversion goes the other way.
+
+A character preceded by a backslash (\) is an escape sequence and has a special meaning to the compiler. The newline character (\n) 
+has been used frequently
+If you want to put quotes within quotes, you must use the escape sequence, \", on the interior quotes.
+
+Some methods:
+
+isLetter() - Determines whether the specified char value is a letter.
+isDigit() - Determines whether the specified char value is a digit.
+isWhitespace(), isUpperCase(), isLowerCase(), toUpperCase(), toLowerCase(), toString().
+
+

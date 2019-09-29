@@ -1,0 +1,32 @@
+Java 8 introduces a new concept of default method implementation in interfaces. 
+This capability is added for backward compatibility so that old interfaces can be used to leverage the lambda expression capability of Java 8. 
+List/Collection interface can now have a default implementation of forEach method, and the class implementing these interfaces need not implement the same.
+
+Multiple Defaults
+
+With default functions in interfaces, there is a possibility that a class is implementing two interfaces with same default methods.
+First solution is to create an own method that overrides the default implementation.
+Second solution is to call the default method of the specified interface using super. ex. interface1.super.method();
+
+An interface can also have static helper methods from Java 8 onwards.
+
+
+interface interface1 {
+    default void method() {
+            System.out.println("interface1 method");
+        }
+}
+
+interface interface2 {
+    default void method() {
+            System.out.println("interface2 method");
+        }
+}
+
+
+public class Class1 implements interface1, interface2 {
+
+	public static void main(String[] args) {
+		System.out.println(interface1.super.method());
+	}
+}

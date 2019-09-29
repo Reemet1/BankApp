@@ -1,0 +1,65 @@
+Java is an Object-Oriented Language. As a language that has the Object-Oriented feature, Java supports the following fundamental concepts:
+
+Polymorphism
+Inheritance
+Encapsulation
+Abstraction
+Classes
+Objects
+Instance
+Method
+Message Parsing
+
+Object - Objects have states and behaviors. Object's state is stored in fields and behavior is shown via methods.
+Methods operate on the internal state of an object and the object-to-object communication is done via methods.
+
+Class - A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.
+
+A class can contain any of the following variable types:
+
+Local variables - Variables defined inside methods, constructors or blocks are called local variables. 
+The variable will be declared and initialized within the method and the variable will be destroyed when the method has completed.
+
+Instance variables - Instance variables are variables within a class but outside any method. These variables are initialized when the class 
+is instantiated. 
+Instance variables can be accessed from inside any method, constructor or blocks of that particular class.
+
+Class variables - Class variables are variables declared within a class, outside any method, with the static keyword.
+
+
+CONSTRUCTORS
+
+Every class has a constructor. If we do not explicitly write a constructor for a class, the Java compiler builds a default constructor 
+for that class.
+Each time a new object is created, at least one constructor will be invoked. The main rule of constructors is that they should have 
+the same name as the class. A class can have more than one constructor.
+
+Creating an Object:
+Declaration - A variable declaration with a variable name with an object type.
+Instantiation - The 'new' keyword is used to create the object.
+Initialization - The 'new' keyword is followed by a call to a constructor. This call initializes the new object.
+
+Instance variables and methods are accessed via created objects.
+Example: Type objectName = new Constructor(); -> objectName.instanceName; objectName.methodName();
+
+Source File Declaration Rules:
+There can be only one public class per source file.
+A source file can have multiple non-public classes.
+The public class name should be the name of the source file.
+If the class is defined inside a package, then the package statement should be the first statement in the source file.
+If import statements are present, then they must be written between the package statement and the class declaration.
+Import and package statements will imply to all the classes present in the source file.
+
+Java Package:
+Java packaging is a way of categorizing the classes and interfaces. 
+When developing applications in Java, hundreds of classes and interfaces will be written, therefore categorizing these classes is a 
+must as well as makes life much easier.
+
+Import Statements:
+In Java if a fully qualified name, which includes the package and the class name is given, then the compiler can easily locate the 
+source code or classes. 
+Import statement is a way of giving the proper location for the compiler to find that particular class.
+
+
+
+

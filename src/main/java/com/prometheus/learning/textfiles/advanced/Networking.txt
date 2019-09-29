@@ -1,0 +1,37 @@
+The term network programming refers to writing programs that execute across multiple devices (computers), in which the devices are all connected to each other using a network.
+
+TCP stands for Transmission Control Protocol, which allows for reliable communication between two applications. 
+TCP is typically used over the Internet Protocol, which is referred to as TCP/IP.
+
+UDP stands for User Datagram Protocol, a connection-less protocol that allows for packets of data to be transmitted between applications.
+
+SOCKET PROGRAMMING
+
+Sockets provide the communication mechanism between two computers using TCP. 
+A client program creates a socket on its end of the communication and attempts to connect that socket to a server.
+When the connection is made, the server creates a socket object on its end of the communication. 
+The client and the server can now communicate by writing to and reading from the socket.
+
+The following steps occur when establishing a TCP connection between two computers using sockets:
+
+The server instantiates a ServerSocket object, denoting which port number communication is to occur on.
+The server invokes the accept() method of the ServerSocket class. This method waits until a client connects to the server on the given port.
+After the server is waiting, a client instantiates a Socket object, specifying the server name and the port number to connect to.
+The constructor of the Socket class attempts to connect the client to the specified server and the port number. 
+If communication is established, the client now has a Socket object capable of communicating with the server.
+On the server side, the accept() method returns a reference to a new socket on the server that is connected to the client's socket.
+
+After the connections are established, communication can occur using I/O streams. Each socket has both an OutputStream and an InputStream. 
+The client's OutputStream is connected to the server's InputStream, and the client's InputStream is connected to the server's OutputStream.
+
+TCP is a two-way communication protocol, hence data can be sent across both streams at the same time.
+
+When the ServerSocket invokes accept(), the method does not return until a client connects. 
+After a client does connect, the ServerSocket creates a new Socket on an unspecified port and returns a reference to this new Socket. 
+A TCP connection now exists between the client and the server, and communication can begin.
+
+When the Socket constructor returns, it does not simply instantiate a Socket object but it actually attempts to connect to the specified server and port.
+
+ServerSocket - accept()
+Socket - connect(SocketAddress host, int timeout), getInetAddress(), getInputStream(), getOutputStream().
+

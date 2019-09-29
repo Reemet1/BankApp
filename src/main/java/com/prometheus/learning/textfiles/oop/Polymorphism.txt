@@ -1,0 +1,10 @@
+Polymorphism is a property of objects to admit a type of any of its superclass (and its own class).
+
+An object initialized using a subclass constructor admits any of its superclass (or its own class) type, 
+but cannot have a type of any of its own subclasses. That means new Subclass() instanceOf Superclass is true.
+Superclass constructor cannot be used to initialize an object of subclass type.
+
+SuperclassType object = new SubclassConstructor();
+
+Subclass type objecy can invoke superclass methods, but
+Superclass type object cannot invoke subclass methods.

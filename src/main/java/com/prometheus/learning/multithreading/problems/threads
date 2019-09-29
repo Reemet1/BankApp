@@ -1,0 +1,14 @@
+
+Slipped condition occurs when a thread gets suspended between checking a condition
+and acting on that condition. This may cause errors because the condition may
+change when a thread is suspended, in which case the thread shouldn't
+act on the previous state of the condition. For example, when 2 readers are reading
+from a file and constantly checking the end of file, when one thread checks that
+enf of file == false, then suspends, and then other reader reaches the end of file,
+the first thread would continue after suspension and act on an end of a file, which
+results in an exception.
+
+Atomic action is executed in one go, and thread cannot suspend between this execution.
+
+
+

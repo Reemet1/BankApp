@@ -1,0 +1,15 @@
+Strings, which are widely used in Java programming, are a sequence of characters. In Java programming language, strings are treated as objects.
+
+The String class is immutable, so that once it is created a String object cannot be changed. 
+If there is a necessity to make a lot of modifications to Strings of characters, then you should use String Buffer & String Builder Classes.
+
+Methods used to obtain information about an object are known as accessor methods.
+Using String's static format() method allows you to create a formatted string that you can reuse, as opposed to a one-time print statement.
+string = String.format("Tekst %f %d %s", floatVar, integerVar, stringVar);
+
+String methods:
+
+charAt(), compareTo(), "string1".concat(string2), equals(), getBytes(), indexOf(ch char), length(), indexOf(String str,int from),
+replace(), split(), subString(), trim(), toUpperCase(), valueOf().
+
+

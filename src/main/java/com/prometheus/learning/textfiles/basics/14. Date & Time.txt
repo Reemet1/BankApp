@@ -1,0 +1,27 @@
+Java provides the Date class available in java.util package, this class encapsulates the current date and time.
+
+Date( ) - This constructor initializes the object with the current date and time.
+
+Some methods:
+
+boolean after(Date date), boolean before(Date date), long getTime( ), String toString( ).
+
+Getting current date and time:
+Date date = new Date(); date.toString();
+
+
+Date Formatting Using SimpleDateFormat
+SimpleDateFormat allows you to start by choosing any user-defined patterns for date-time formatting.
+Date date = new Date(); SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy 'at' HH.mm.ss")
+System.out.println(String.format("Date: %tY", new Date()));
+System.out.println(String.format("%2$td.%2$tm.%2$tY","Date: ", new Date()));
+
+GregorianCalendar gc = new GregorianCalendar();
+SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
+		
+System.out.println(gc.get(Calendar.DAY_OF_MONTH) + "-" + (gc.get(Calendar.MONTH)+1) + "-" + gc.get(Calendar.YEAR));
+System.out.println(sdf.format(new Date()));
+
+
+
+

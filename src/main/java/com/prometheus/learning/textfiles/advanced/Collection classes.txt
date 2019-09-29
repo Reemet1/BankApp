@@ -1,0 +1,49 @@
+Java provides a set of standard collection classes that implement Collection interfaces. 
+Some of the classes provide full implementations that can be used as-is and others are abstract class, providing skeletal implementations 
+that are used as starting points for creating concrete collections.
+
+ABSTRACTCollection - implements most of the Collection interface.
+
+ABSTRACTList - extends AbstractCollection and implements most of the List interface.
+
+ABSTRACTSequentialList - extends AbstractList for use by a collection that uses sequential rather than random access of its elements.
+
+LinkedList - extends AbstractSequentialList and implements the List interface. It provides a linked-list data structure.
+Methods: addFirst(Object), addLast(Object), getFirst(), getLast(), removeFirst(), removeLast(), Object[] toArray().
+
+ArrayList - extends AbstractList and implements the List interface. ArrayList supports dynamic arrays that can grow and shrink as needed.
+Methods: add(), addAll(), indexOf(), clear(), size(), get(), remove().
+
+ABSTRACTSet - extends AbstractCollection and implements most of the Set interface.
+
+HashSet - extends AbstractSet and implements the Set interface. It creates a collection that uses a hash table for storage.
+A hash table stores information by using a mechanism called hashing. In hashing, the informational content of a key is used to determine a unique value, called its hash code.
+The hash code is then used as the index at which the data associated with the key is stored. The transformation of the key into its hash code is performed automatically.
+
+LinkedHashSet - extends HashSet, but adds no members of its own. LinkedHashSet maintains a linked list of the entries in the set, in the order in which they were inserted. 
+This allows insertion-order iteration over the set.
+
+TreeSet - provides an implementation of the Set interface that uses a tree for storage. Objects are stored in a sorted and ascending order.
+Access and retrieval times are quite fast, which makes TreeSet an excellent choice when storing large amounts of sorted information that must be found quickly.
+
+ABSTRACTMap - implements most of the Map interface.
+
+HashMap - uses a hashtable to implement the Map interface. This allows the execution time of basic operations, such as get( ) and put( ), to remain constant even for large sets.
+
+TreeMap - provides an efficient means of storing key/value pairs in sorted order, and allows rapid retrieval.
+Unlike a hash map, a tree map guarantees that its elements will be sorted in an ascending key order.
+
+WeakHashMap - stores only weak references to its keys, which allows a key-value pair to be garbage-collected when its key is no longer referenced outside of the WeakHashMap.
+It is useful for implementing "registry-like" data structures, where the utility of an entry vanishes when its key is no longer reachable by any thread.
+Identical to HashMap, but differs in that if the Java memory manager no longer has a strong reference to the object specified as a key, then the entry in the map will be removed.
+Weak reference - If the only references to an object are weak references, the garbage collector can reclaim the object's memory at any time.
+it doesn't have to wait until the system runs out of memory. Usually, it will be freed the next time the garbage collector runs.
+System.gc() - garbage collection method.
+
+LinkedHashMap - extends HashMap and maintains a linked list of the entries in the map, in the order in which they were inserted. 
+This allows insertion-order iteration over the map. That is, when iterating a LinkedHashMap, the elements will be returned in the order in which they were inserted. Order can be reversed.
+
+
+
+
+

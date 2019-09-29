@@ -1,0 +1,29 @@
+Java provides a mechanism, called object serialization where an object can be represented as a sequence of bytes that includes the object's data 
+as well as information about the object's type and the types of data stored in the object.
+
+After a serialized object has been written into a file, it can be read from the file and deserialized that is, 
+the type information and bytes that represent the object and its data can be used to recreate the object in memory.
+
+Most impressive is that the entire process is JVM independent, meaning an object can be serialized on one platform and deserialized on an entirely different platform.
+
+Classes ObjectInputStream and ObjectOutputStream are high-level streams that contain the methods for serializing and deserializing an object.
+
+Notice that for a class to be serialized successfully, two conditions must be met:
+The class must implement the java.io.Serializable interface.
+All of the fields in the class must be serializable. If a field is not serializable, it must be marked transient.
+
+Serializing an Object:
+ObjectType o = new Constructor();
+ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file/directory.ser"));
+out.writeObject(o);
+
+Deserializing an Object:
+ObjectInputStream in = new ObjectInputStream(new FileInputStream("file/directory.set"));
+ObjectType o = (ObjectType) in.readObject();  \\Needs to be casted
+
+The try/catch block tries to catch a ClassNotFoundException, which is declared by the readObject() method. 
+For a JVM to be able to deserialize an object, it must be able to find the bytecode for the class. 
+If the JVM can't find a class during the deserialization of an object, it throws a ClassNotFoundException.
+
+
+

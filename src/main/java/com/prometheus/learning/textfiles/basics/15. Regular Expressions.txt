@@ -1,0 +1,17 @@
+A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a 
+specialized syntax held in a pattern. 
+They can be used to search, edit, or manipulate text and data.
+
+The java.util.regex package primarily consists of the following three classes
+
+A Pattern object is a compiled representation of a regular expression. Pattern p = Pattern.compile("\\regular expression");
+
+A Matcher object is the engine that interprets the pattern and performs match operations against an input string.
+Mather m = p.matcher("String");
+
+m.find(), m.group()
+
+A PatternSyntaxException object is an unchecked exception that indicates a syntax error in a regular expression pattern.
+
+
+

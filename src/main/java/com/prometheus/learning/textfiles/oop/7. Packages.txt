@@ -1,0 +1,29 @@
+A Package can be defined as a grouping of related types (classes, interfaces, enumerations and annotations ) providing access protection and namespace management.
+Packages are used in Java in order to prevent naming conflicts, to control access, to make searching/locating and usage of classes, interfaces, enumerations and annotations easier, etc.
+
+Programmers can define their own packages to bundle group of classes/interfaces, etc. It is a good practice to group related classes implemented by you so that a programmer can 
+easily determine that the classes, interfaces, enumerations, and annotations are related.
+
+The package statement should be the first line in the source file. There can be only one package statement in each source file, and it applies to all types in the file.
+If a package statement is not used then the class, interfaces, enumerations, and annotation types will be placed in the current default package.
+
+If a class wants to use another class in the same package, the package name need not be used. Classes in the same package find each other without any special syntax
+
+packageName.ClassName or import packageName.*; or import packageName.ClassName;
+
+
+THE DIRECTORY STRUCTURE OF PACKAGES
+
+The name of the package becomes a part of the name of the class, as we just discussed in the previous section.
+
+The name of the package must match the directory structure where the corresponding bytecode resides.
+
+The package name must correspond to its directory: pakcage1.package2.Class <--> ..\package1\package2\Class.class
+
+.java and .class files can be set to be put into different directories by setting the classpath.
+
+By doing this, it is possible to give access to the classes directory to other programmers without revealing your sources. 
+You also need to manage source and class files in this manner so that the compiler and the Java Virtual Machine (JVM) can find all the types your program uses.
+Both the compiler and the JVM construct the path to your .class files by adding the package name to the class path.
+
+
