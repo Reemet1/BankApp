@@ -1,4 +1,4 @@
-package com.prometheus.bank.security.crypto.custom.encryption;
+package com.prometheus.platform.crypto.custom.encryption;
 
 import java.util.HashMap;
 import java.util.Map;

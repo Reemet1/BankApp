@@ -1,4 +1,4 @@
-package com.prometheus.bank.security.crypto.custom.utils;
+package com.prometheus.platform.crypto.custom.utils;
 
 public class Utils {
 

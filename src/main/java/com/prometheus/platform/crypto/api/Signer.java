@@ -1,4 +1,4 @@
-package com.prometheus.bank.security.crypto.api;
+package com.prometheus.platform.crypto.api;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;

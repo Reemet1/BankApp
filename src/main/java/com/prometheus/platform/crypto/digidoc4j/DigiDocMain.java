@@ -1,8 +1,8 @@
-package com.prometheus.bank.security.crypto.digidoc4j;
+package com.prometheus.platform.crypto.digidoc4j;
 
-import com.prometheus.bank.security.crypto.api.Algorithms;
-import com.prometheus.bank.security.crypto.api.KeyGenerator;
-import com.prometheus.bank.security.crypto.api.Signer;
+import com.prometheus.platform.crypto.api.Algorithms;
+import com.prometheus.platform.crypto.api.KeyGenerator;
+import com.prometheus.platform.crypto.api.Signer;
 import org.digidoc4j.*;
 
 import java.io.File;

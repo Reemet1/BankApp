@@ -1,6 +1,6 @@
-package com.prometheus.bank.security.crypto.custom.hash;
+package com.prometheus.platform.crypto.custom.hash;
 
-import com.prometheus.bank.security.crypto.custom.utils.Utils;
+import com.prometheus.platform.crypto.custom.utils.Utils;
 
 public class SecureHash {
 

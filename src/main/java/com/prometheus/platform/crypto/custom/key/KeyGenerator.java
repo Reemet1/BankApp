@@ -1,7 +1,7 @@
-package com.prometheus.bank.security.crypto.custom.key;
+package com.prometheus.platform.crypto.custom.key;
 
-import com.prometheus.bank.security.crypto.custom.utils.MathUtils;
-import com.prometheus.bank.security.crypto.custom.utils.PrimeGenerator;
+import com.prometheus.platform.crypto.custom.utils.MathUtils;
+import com.prometheus.platform.crypto.custom.utils.PrimeGenerator;
 
 import java.math.BigInteger;
 import java.util.Random;
