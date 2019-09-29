@@ -1,0 +1,140 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <!-- Scan for components under this package -->
+    <context:component-scan base-package="com.prometheus.bank.security" />
+    <context:component-scan base-package="com.prometheus.bank.dao" />
+    <!--<context:annotation-config /> -->
+
+    <http pattern="/favicon.ico" security="none" />
+
+    <http auto-config="true" use-expressions="true" >
+        <csrf disabled="true"/>
+
+        <intercept-url pattern="/login" access="isAnonymous()"></intercept-url>
+        <intercept-url pattern="/home" access="isAnonymous()"></intercept-url>
+        <intercept-url pattern="/logout" access="isAnonymous()"></intercept-url>
+        <!--<intercept-url pattern="/authenticate" access="isAnonymous()"></intercept-url> -->
+        <intercept-url pattern="/adminhome" access="hasRole('ADMIN')"></intercept-url>
+        <!--<intercept-url pattern="/*" access="hasRole('ROLE_USER')"></intercept-url> -->
+        <form-login login-page="/login" login-processing-url="/authenticate"
+            authentication-success-handler-ref="myAuthenticationSuccessHandler" />
+        <logout
+                logout-url="/logout"
+                success-handler-ref="logoutSuccessHandler"
+                delete-cookies="JSESSIONID" />
+    </http>
+
+    <beans:bean id="myAuthenticationSuccessHandler"
+                class="com.prometheus.bank.security.auth.MySimpleUrlAuthenticationSuccessHandler" />
+
+    <!--
+    <global-method-security pre-post-annotations="enabled">
+        <expression-handler ref="expressionHandler"/>
+    </global-method-security>
+
+    <beans:bean id="expressionHandler" class=
+            "org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+        <beans:property name="permissionEvaluator" ref="customPermissionEvaluator"/>
+    </beans:bean>
+    -->
+
+    <!--
+    <beans:bean name="bcryptEncoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    -->
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider ref="authProvider" >
+            <!--<user-service>
+                <user name="reemet"  password="{noop}parool"  authorities="ROLE_USER" />
+                <user name="admin"  password="{noop}parool"  authorities="ROLE_ADMIN" />
+            </user-service> -->
+        </authentication-provider>
+    </authentication-manager>
+
+    <!--
+    <beans:bean id="daoAuthenticationProvider"
+          class="com.prometheus.bank.security.auth.AuthProvider" >
+          <beans:property name="userDetailsService" ref="userDetailsImpl"/>
+    </beans:bean>
+    -->
+
+    <!--<beans:bean name="userDetailsImpl" class="com.prometheus.bank.security.auth.UserDetailsImpl"></beans:bean> -->
+
+
+    <!--
+    <authentication-manager >
+        <authentication-provider>
+            <user-service>
+                <user name="reemet"  password="{noop}parool"  authorities="ROLE_USER" />
+                <user name="admin"  password="{noop}parool"  authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+       -->
+
+
+    <!--
+    <beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <beans:property name="url" value="jdbc:mysql://localhost:3306/school?useSSL=false&amp;serverTimezone=UTC" />
+        <beans:property name="username" value="reemet" />
+        <beans:property name="password" value="parool" />
+
+    </beans:bean> -->
+
+    <beans:bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <beans:property name="dataSource" ref="myDataSource" />
+        <beans:property name="packagesToScan" value="com.prometheus.bank.entity" />
+        <beans:property name="hibernateProperties">
+            <beans:props>
+                <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
+                <beans:prop key="hibernate.show_sql">true</beans:prop>
+
+                <beans:prop key="show_sql">true</beans:prop>
+                <beans:prop key="format_sql">true</beans:prop>
+                <beans:prop key="use_sql_comments">true</beans:prop>
+            </beans:props>
+        </beans:property>
+
+        <beans:property name="mappingResources">
+            <beans:list>
+                <beans:value>mapping.hbm.xml</beans:value>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <beans:property name="entityManagerFactory" ref="sessionFactory" />
+    </beans:bean>
+    <tx:annotation-driven transaction-manager="txManager" />
+
+    <!-- ############## DATA SOURCE CONFIGURATION ########### -->
+    <beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <beans:property name="url" value="jdbc:mysql://localhost:3306/bank?useSSL=false&amp;serverTimezone=UTC" />
+        <beans:property name="username" value="reemet" />
+        <beans:property name="password" value="parool" />
+
+    </beans:bean>
+
+
+</beans:beans>
+
+
+

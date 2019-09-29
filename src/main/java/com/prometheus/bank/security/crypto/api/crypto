@@ -1,0 +1,60 @@
+
+Cryptographic services:
+Data Confidentiality - makes the data unreadable for non-related parties
+Integrity            - makes sure that the data has not been changed in its transmission
+Authenticity         - makes sure that the data has been sent from the right person or by you,
+                       only the receiver can authenticate this message.
+Non-Repudiation      - makes sure that the data has been sent from exactly one person,
+                       everyone can authenticate a non-repudiation message.
+
+
+Cryptographic services are provided by different cryptographic primities:
+Encryption
+Hash functions
+Message Authentication Code (MAC)
+Digital signature
+
+Encryption algorithms are divided into
+Symmetric key algorithms - require a single private key
+Asymmetric key algorithms - require a public and a private key pair
+
+
+ENCRYPTION
+Encryption is done by Ciphers. Block ciphers process data by fixed size blocks.
+Most popular ciphers include
+Data Encryption Standard - DES (symmetric)
+Advanced Encryption Standard - AES (symmetric)
+Rivest–Shamir–Adleman - RSA (asymmetric)
+
+Symmetric key ciphers require Initialization Vector (IV)
+
+These ciphers operate on with various Modes of Operations:
+An initialization vector (IV) or starting variable (SV)[5] is a block of bits
+that is used by several modes to randomize the encryption and hence to produce
+distinct ciphertexts even if the same plaintext is encrypted multiple times,
+without the need for a slower re-keying process.
+Electronic Codebook - ECB
+Cipher Block Chaining - CBC
+
+and Paddings (adding data to the beginning, middle, or end of a message prior to encryption)
+PKCS5Padding
+NoPadding
+
+
+HASH FUNCTIONS
+Hash functions implement message digestions. Common message digestion algorithms
+MD5 - widely used hash function producing a 128-bit hash value, used for checksums
+SHA1, SHA256, SHA384, SHA512 - standard and most secure message digest algorithms
+
+MAC
+keyed-hash message authentication code or hash-based message authentication code - HMAC
+involves using cryptographic hash functions:
+MD5, SHA1, SHA256 combined into HmacMD5, HmacSHA1, HmacSHA256
+
+
+
+DIGITAL SIGNATURE
+Digital Signature Algorithm - DSA
+combined with SHA1
+or RSA combined with SHA1 or SHA256
+

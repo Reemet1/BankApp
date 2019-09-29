@@ -1,0 +1,406 @@
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@14b52652, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69319ba9, org.springframework.security.web.header.HeaderWriterFilter@6f2a03f0, org.springframework.security.web.authentication.logout.LogoutFilter@3b9a43af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@699dc51e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5e6ce4e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@341d0328, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@568793e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d683914, org.springframework.security.web.session.SessionManagementFilter@5676d812, org.springframework.security.web.access.ExceptionTranslationFilter@424797b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c0f77cb]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 7200 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2895 ms
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@409a355c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d268fcd, org.springframework.security.web.header.HeaderWriterFilter@22fdce90, org.springframework.security.web.authentication.logout.LogoutFilter@6da79639, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@83e4f83, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@16147b37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d8efdf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@779a4268, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c8d5f32, org.springframework.security.web.session.SessionManagementFilter@58e6fc01, org.springframework.security.web.access.ExceptionTranslationFilter@53a2b003, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18a4fdb4]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 7109 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2562 ms
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-10] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-1] WARN  org.springframework.web.servlet.PageNotFound  - No mapping for GET /favicon.ico
+[https-jsse-nio-8443-exec-10] WARN  org.springframework.web.servlet.PageNotFound  - No mapping for GET /favicon.ico
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@489a17db, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c69b531, org.springframework.security.web.header.HeaderWriterFilter@67d04499, org.springframework.security.web.authentication.logout.LogoutFilter@165de137, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68c89787, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3161313f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ee1e2f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eb99e8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58d6a92b, org.springframework.security.web.session.SessionManagementFilter@7b32eb24, org.springframework.security.web.access.ExceptionTranslationFilter@3a5e568f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a64ed5e]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 7066 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2475 ms
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-10] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@1f85c3f9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ef0c4fe, org.springframework.security.web.header.HeaderWriterFilter@2c9f749f, org.springframework.security.web.authentication.logout.LogoutFilter@1e8b3112, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@21fe79e3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6e3375dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@298a6a04, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ef6e0c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4216d5de, org.springframework.security.web.session.SessionManagementFilter@627914a6, org.springframework.security.web.access.ExceptionTranslationFilter@71d16f48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c98233a]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 7196 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 3022 ms
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-10] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] ERROR org.springframework.web.context.ContextLoader  - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from ServletContext resource [/WEB-INF/config/application-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 55; The prefix "task" for element "task:scheduler" is not bound.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:404)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:224)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:195)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:133)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:521)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4682)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5143)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1728)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:457)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:406)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at java.management/com.sun.jmx.remote.security.MBeanServerAccessController.invoke(MBeanServerAccessController.java:468)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1466)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:688)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1406)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:827)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:688)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:389)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 55; The prefix "task" for element "task:scheduler" is not bound.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2710)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:77)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:434)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	... 59 more
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@7d79317d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59c620f2, org.springframework.security.web.header.HeaderWriterFilter@730f5e30, org.springframework.security.web.authentication.logout.LogoutFilter@3803c848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@725dd792, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4004a1e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f0afa7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57fc66f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a6f6128, org.springframework.security.web.session.SessionManagementFilter@3875be28, org.springframework.security.web.access.ExceptionTranslationFilter@799f8569, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2931f9ab]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 6741 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor  - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2709 ms
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-10] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[https-jsse-nio-8443-exec-1] WARN  org.springframework.web.servlet.PageNotFound  - No mapping for GET /favicon.ico
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@7f4329a3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45277f27, org.springframework.security.web.header.HeaderWriterFilter@6a900c0a, org.springframework.security.web.authentication.logout.LogoutFilter@7b269082, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@552300a7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7336ac0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73c84815, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f95718b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2818b51e, org.springframework.security.web.session.SessionManagementFilter@576c963d, org.springframework.security.web.access.ExceptionTranslationFilter@1d0542, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@789e6a56]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 6679 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor  - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2851 ms
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security 'config' module version is 5.1.5.RELEASE
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /login
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'isAnonymous()' for /logout
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.FilterInvocationSecurityMetadataSourceParser  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.4.2.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 6.0.16.Final
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@57e9d1cb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@736e17f6, org.springframework.security.web.header.HeaderWriterFilter@11aca3fd, org.springframework.security.web.authentication.logout.LogoutFilter@106e34b5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2c0ef018, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@44d280a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34ade732, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c33ad0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33b58926, org.springframework.security.web.session.SessionManagementFilter@73fcdd0f, org.springframework.security.web.access.ExceptionTranslationFilter@82dff22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a5a88b0]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL '/login' is accessible with your configuration
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext initialized in 6555 ms
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcher-servlet'
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor  - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2887 ms
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[https-jsse-nio-8443-exec-5] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[https-jsse-nio-8443-exec-10] INFO  com.prometheus.bank.logger.Logger  - Opening Login page
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+[pool-1-thread-1] INFO  com.prometheus.bank.logger.Logger  - Scheduled task
+2019-09-23 19:26:21,168 INFO  - Root WebApplicationContext: initialization started
+2019-09-23 19:26:21,840 INFO  - You are running with Spring Security Core 5.1.5.RELEASE
+2019-09-23 19:26:21,856 INFO  - Spring Security 'config' module version is 5.1.5.RELEASE
+2019-09-23 19:26:21,934 INFO  - Creating access control expression attribute 'isAnonymous()' for /login
+2019-09-23 19:26:21,934 INFO  - Creating access control expression attribute 'isAnonymous()' for /home
+2019-09-23 19:26:21,934 INFO  - Creating access control expression attribute 'isAnonymous()' for /logout
+2019-09-23 19:26:21,934 INFO  - Creating access control expression attribute 'hasRole('ADMIN')' for /adminhome
+2019-09-23 19:26:21,981 INFO  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.header.HeaderWriterFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 500, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1200, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1900, Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.http.HttpConfigurationBuilder$SecurityContextHolderAwareRequestFilterBeanFactory#0; factoryMethodName=getBean; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2300, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2400, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2500, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2600]
+2019-09-23 19:26:23,043 INFO  - HHH000412: Hibernate Core {5.4.2.Final}
+2019-09-23 19:26:24,621 INFO  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-09-23 19:26:25,215 INFO  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-09-23 19:26:25,996 INFO  - HV000001: Hibernate Validator 6.0.16.Final
+2019-09-23 19:26:27,605 INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-09-23 19:26:27,730 INFO  - Creating filter chain: Ant [pattern='/favicon.ico'], []
+2019-09-23 19:26:28,121 INFO  - Creating filter chain: any request, [org.springframework.security.web.context.SecurityContextPersistenceFilter@589ec5e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7405fbb1, org.springframework.security.web.header.HeaderWriterFilter@355db488, org.springframework.security.web.authentication.logout.LogoutFilter@63fc8871, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@629a6a77, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2a26116d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fec27c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13e10924, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2968ce66, org.springframework.security.web.session.SessionManagementFilter@18eeccca, org.springframework.security.web.access.ExceptionTranslationFilter@1486d348, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@242aae30]
+2019-09-23 19:26:28,152 INFO  - Checking whether login URL '/login' is accessible with your configuration
+2019-09-23 19:26:28,324 INFO  - Root WebApplicationContext initialized in 7125 ms
+2019-09-23 19:26:28,371 INFO  - Initializing Servlet 'dispatcher-servlet'
+2019-09-23 19:26:29,543 INFO  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-09-23 19:26:29,762 INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-09-23 19:26:31,074 INFO  - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-09-23 19:26:31,090 INFO  - Completed initialization in 2719 ms
+2019-09-23 19:26:31,090 INFO  - Scheduled task
+2019-09-23 19:26:31,574 INFO  - Opening Login page
+2019-09-23 19:26:32,105 INFO  - Scheduled task
+2019-09-23 19:26:33,105 INFO  - Scheduled task
+2019-09-23 19:26:33,308 INFO  - Opening Login page
+2019-09-23 19:26:34,105 INFO  - Scheduled task
+2019-09-23 19:26:35,105 INFO  - Scheduled task
+2019-09-23 19:26:36,105 INFO  - Scheduled task
+2019-09-23 19:26:37,105 INFO  - Scheduled task
+2019-09-23 19:26:38,105 INFO  - Scheduled task
+2019-09-23 19:26:39,105 INFO  - Scheduled task
+2019-09-23 19:26:40,105 INFO  - Scheduled task
+2019-09-23 19:26:41,105 INFO  - Scheduled task
+2019-09-23 19:26:42,105 INFO  - Scheduled task
+2019-09-23 19:26:43,105 INFO  - Scheduled task
+2019-09-23 19:26:44,105 INFO  - Scheduled task
+2019-09-23 19:26:45,105 INFO  - Scheduled task
+2019-09-23 19:26:46,105 INFO  - Scheduled task
+2019-09-23 19:26:47,105 INFO  - Scheduled task
+2019-09-23 19:26:48,105 INFO  - Scheduled task
+2019-09-23 19:26:49,105 INFO  - Scheduled task
+2019-09-23 19:26:50,105 INFO  - Scheduled task
+2019-09-23 19:26:51,105 INFO  - Scheduled task
+2019-09-23 19:26:52,105 INFO  - Scheduled task
+2019-09-23 19:26:53,105 INFO  - Scheduled task
+2019-09-23 19:26:54,105 INFO  - Scheduled task
+2019-09-23 19:26:55,105 INFO  - Scheduled task
+2019-09-23 19:26:56,105 INFO  - Scheduled task
+2019-09-23 19:26:57,105 INFO  - Scheduled task
+2019-09-23 19:26:58,105 INFO  - Scheduled task
+2019-09-23 19:26:59,105 INFO  - Scheduled task
+2019-09-23 19:27:00,105 INFO  - Scheduled task
+2019-09-23 19:27:01,104 INFO  - Scheduled task
+2019-09-23 19:27:02,104 INFO  - Scheduled task
+2019-09-23 19:27:03,104 INFO  - Scheduled task
+2019-09-23 19:27:04,104 INFO  - Scheduled task
+2019-09-23 19:27:05,104 INFO  - Scheduled task
+2019-09-23 19:27:06,104 INFO  - Scheduled task
+2019-09-23 19:27:07,104 INFO  - Scheduled task
+2019-09-23 19:27:08,104 INFO  - Scheduled task
+2019-09-23 19:27:09,104 INFO  - Scheduled task
+2019-09-23 19:27:10,104 INFO  - Scheduled task
+2019-09-23 19:27:11,104 INFO  - Scheduled task
+2019-09-23 19:27:12,104 INFO  - Scheduled task
+2019-09-23 19:27:13,104 INFO  - Scheduled task
+2019-09-23 19:27:14,104 INFO  - Scheduled task
+2019-09-23 19:27:15,104 INFO  - Scheduled task
+2019-09-23 19:27:16,104 INFO  - Scheduled task
+2019-09-23 19:27:17,104 INFO  - Scheduled task
+2019-09-23 19:27:18,104 INFO  - Scheduled task
+2019-09-23 19:27:19,104 INFO  - Scheduled task
+2019-09-23 19:27:20,104 INFO  - Scheduled task
+2019-09-23 19:27:21,104 INFO  - Scheduled task
+2019-09-23 19:27:22,104 INFO  - Scheduled task
+2019-09-23 19:27:23,104 INFO  - Scheduled task
+2019-09-23 19:27:24,104 INFO  - Scheduled task
+2019-09-23 19:27:25,104 INFO  - Scheduled task
+2019-09-23 19:27:26,104 INFO  - Scheduled task
+2019-09-23 19:27:27,104 INFO  - Scheduled task
+2019-09-23 19:27:28,104 INFO  - Scheduled task
+2019-09-23 19:27:29,104 INFO  - Scheduled task
+2019-09-23 19:27:30,104 INFO  - Scheduled task

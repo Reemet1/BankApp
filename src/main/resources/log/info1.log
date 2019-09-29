@@ -1,0 +1,2 @@
+[main] INFO  com.prometheus.bank.logger.LoggerMain  - Logger info 2
+[main] INFO  com.prometheus.bank.logger.Logger  - Testing log
