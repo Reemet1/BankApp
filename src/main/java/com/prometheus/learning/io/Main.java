@@ -1,6 +1,6 @@
 package com.prometheus.learning.io;
 
-import learning.io.nio.PathClass;
+import com.prometheus.learning.io.nio.PathClass;
 
 public class Main {
 

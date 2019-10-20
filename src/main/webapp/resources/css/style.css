@@ -12,6 +12,8 @@
     height: 500px;
     display: block;
     background-color: lightblue;
+    overflow:hidden;
+    overflow-y: scroll;
 }
 
 #footer {

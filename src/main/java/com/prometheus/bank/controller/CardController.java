@@ -60,7 +60,7 @@ public class CardController {
     }
 
     @RequestMapping("/addCard")
-    public String showCard(/*@Valid */@ModelAttribute("cardForm") CardForm cardForm, BindingResult bindingResult, Model model) {
+    public String showCard(@Valid @ModelAttribute("cardForm") CardForm cardForm, BindingResult bindingResult, Model model) {
 
         if(bindingResult.hasErrors()) {
             return "user/add-card-form";

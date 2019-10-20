@@ -1,6 +1,6 @@
 package com.prometheus.learning.lang;
 
-import learning.lang.interfaces.AutoCloseableImpl;
+import com.prometheus.learning.lang.interfaces.AutoCloseableImpl;
 
 import java.io.IOException;
 
@@ -166,9 +166,9 @@ public class Exceptions {
         }
 
         try {
-            throw new CustomUncheckedException("This is a custom unchecked exception");
+            throw new CustomUncheckedException("This is a impl unchecked exception");
         } catch (CustomUncheckedException e) {
-            System.out.println("Handling custom unchecked exception");
+            System.out.println("Handling impl unchecked exception");
         }
 
         /** To create checked exception, the class has to extend IOException or Exception classes. */

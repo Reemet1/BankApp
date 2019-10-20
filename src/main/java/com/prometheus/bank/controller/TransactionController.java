@@ -5,6 +5,7 @@ import com.prometheus.bank.entity.Client;
 import com.prometheus.bank.entity.Transaction;
 import com.prometheus.bank.service.AccountService;
 import com.prometheus.bank.service.ClientService;
+import com.prometheus.bank.service.FeeService;
 import com.prometheus.bank.service.UserService;
 import com.prometheus.bank.form.TransactionForm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,9 @@ public class TransactionController {
     private UserService userService;
 
     @Autowired
+    private FeeService feeService;
+
+    @Autowired
     private HttpServletRequest context;
 
     @RequestMapping("/show")
@@ -47,7 +51,7 @@ public class TransactionController {
     }
 
     @RequestMapping("/process")
-    public String processTransaction(/*@Valid */@ModelAttribute("transactionForm") TransactionForm transactionForm, BindingResult bindingResult, Model model) {
+    public String processTransaction(@Valid @ModelAttribute("transactionForm") TransactionForm transactionForm, BindingResult bindingResult, Model model) {
 
         if(bindingResult.hasErrors()) {
             return "user/payments";
@@ -79,6 +83,8 @@ public class TransactionController {
         transaction.setSendDateTime(LocalDateTime.now());
 
         accountService.processTransaction(transaction);
+
+
 
         return "user/payment-processed";
     }

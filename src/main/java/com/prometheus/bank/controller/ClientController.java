@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -46,7 +47,7 @@ public class ClientController {
     }
 
     @RequestMapping("/update")
-    public String updateClientDetails(@ModelAttribute("clientDetails") ClientDetails clientDetails) {
+    public String updateClientDetails(@Valid @ModelAttribute("clientDetails") ClientDetails clientDetails) {
 
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Client client = userService.getUser(user.getUsername()).getClient();

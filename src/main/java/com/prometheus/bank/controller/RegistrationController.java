@@ -34,7 +34,7 @@ public class RegistrationController {
     }
 
     @RequestMapping("/confirm")
-    public String confirmRegistration(/*@Valid */@ModelAttribute("registrationForm") RegistrationForm registrationForm, BindingResult bindingResult) {
+    public String confirmRegistration(@Valid @ModelAttribute("registrationForm") RegistrationForm registrationForm, BindingResult bindingResult) {
 
         if(bindingResult.hasErrors()) {
             return "user/registration-form";

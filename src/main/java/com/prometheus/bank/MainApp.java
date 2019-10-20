@@ -1,6 +1,7 @@
 package com.prometheus.bank;
 
 import com.prometheus.bank.entity.*;
+import com.prometheus.bank.form.validator.constraint.AccountNumberConstraint;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,6 +13,9 @@ public class MainApp {
 
     static SessionFactory factory;
 
+    @AccountNumberConstraint
+    static String testStr;
+
     public static void main(String[] args) {
 
         MainApp mainApp = new MainApp();
@@ -19,7 +23,7 @@ public class MainApp {
         try {
 
             factory = new Configuration()
-                    .configure("hibernate.cfg.xml") //.configure() - Default is hibernate.cfg.xml
+                    .configure("mainres/hibernate.cfg.xml") //.configure() - Default is hibernate.cfg.xml
                     .addAnnotatedClass(Client.class)
                     .addAnnotatedClass(ClientDetails.class)
                     .addAnnotatedClass(Employee.class)
@@ -84,7 +88,7 @@ public class MainApp {
     private static void openSessionFactory() {
 
         factory = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("mainres/hibernate.cfg.xml")
                 .buildSessionFactory();
 
     }

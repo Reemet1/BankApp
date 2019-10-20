@@ -4,6 +4,7 @@ import com.prometheus.bank.entity.Account;
 import com.prometheus.bank.entity.Limit;
 import com.prometheus.bank.entity.Loan;
 import com.prometheus.bank.form.AccountForm;
+import com.prometheus.bank.logger.Logger;
 import com.prometheus.bank.service.AccountService;
 import com.prometheus.bank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Collection;
 import java.util.List;
 
@@ -31,6 +33,8 @@ public class AccountController {
 
     @GetMapping("/show")
     public String showAccounts(Model model) {
+
+        Logger.logger.info("Test log");
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User user=null;
@@ -86,7 +90,7 @@ public class AccountController {
     }
 
     @PostMapping("/updateLimits")
-    public String updateAccountLimits(@ModelAttribute("limits") Limit limits) {
+    public String updateAccountLimits(@Valid @ModelAttribute("limits") Limit limits) {
 
         Account account = limits.getAccount();
         account.setAccountLimits(limits);
@@ -97,7 +101,7 @@ public class AccountController {
     }
 
     @PostMapping("/addAccount")
-    public String addAccount(/*@Valid */@ModelAttribute("accountForm") AccountForm accountForm, BindingResult bindingResult, Model model) {
+    public String addAccount(@Valid @ModelAttribute("accountForm") AccountForm accountForm, BindingResult bindingResult, Model model) {
 
         if(bindingResult.hasErrors()) {
             return "user/add-account-form";

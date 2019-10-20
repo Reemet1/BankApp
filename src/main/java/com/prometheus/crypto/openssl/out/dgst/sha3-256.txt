@@ -1,0 +1,1 @@
+SHA3-256(file.pem)= fa3256dadfc8cc2b3bf53c44a42ba0bc5367a0e913d67cb4da50c45b0955ee4c

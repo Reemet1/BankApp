@@ -1,6 +1,6 @@
 package junit;
 
-import com.prometheus.bank.security.crypto.custom.encryption.AesImpl;
+import com.prometheus.crypto.impl.AESImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class TestAES {
 
-    AesImpl aes = new AesImpl();
+    AESImpl aes = new AESImpl();
 
     @Test
     public void testEncryption() throws Exception{
@@ -38,7 +38,7 @@ public class TestAES {
 
         byte[] decrypted = aes.decrypt(encrypted, key);
 
-        //Assert.assertArrayEquals(input, decrypted);
+        Assert.assertArrayEquals(input, decrypted);
 
     }
 
@@ -58,9 +58,9 @@ public class TestAES {
     public void testKeyExpansion() {
 
         byte[] cipherKey = {(byte)0x2b,(byte)0x7e,(byte)0x15,(byte)0x16,
-                (byte)0x28,(byte)0xae,(byte)0xd2,(byte)0xa6,
-                (byte)0xab,(byte)0xf7,(byte)0x15,(byte)0x88,
-                (byte)0x09,(byte)0xcf,(byte)0x4f, (byte)0x3c};
+                            (byte)0x28,(byte)0xae,(byte)0xd2,(byte)0xa6,
+                            (byte)0xab,(byte)0xf7,(byte)0x15,(byte)0x88,
+                            (byte)0x09,(byte)0xcf,(byte)0x4f, (byte)0x3c};
 
         byte[][] expansion = aes.keyExpansion(cipherKey);
 

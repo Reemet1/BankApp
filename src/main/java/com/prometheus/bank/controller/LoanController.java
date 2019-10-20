@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -48,24 +49,7 @@ public class LoanController {
     }
 
     @RequestMapping("/take")
-    public String takeLoan(@ModelAttribute("loan") Loan loan) {
-
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Client client = userService.getUser(user.getUsername()).getClient();
-
-        Document document = new Document();
-        document.setClient(client);
-
-        loan.setContract(document);
-        loan.setClient(client);
-        double interestRate = 0.04;
-        double totalInterest = loan.getTotalPaybackTime()*interestRate;
-        double totalPaybackAmount = loan.getLoanAmount()+loan.getLoanAmount()*totalInterest;
-        double monthlyPay = totalPaybackAmount/loan.getTotalPaybackTime();
-
-        loan.setInterestRate(interestRate);
-        loan.setPaybackAmount(totalPaybackAmount);
-        loan.setMonthlyPaymentAmount(monthlyPay);
+    public String takeLoan(@Valid @ModelAttribute("loan") Loan loan) {
 
         loanService.addLoan(loan);
 

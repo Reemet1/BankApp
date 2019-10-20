@@ -1,0 +1,109 @@
+
+https://en.wikipedia.org/wiki/Public_key_infrastructure
+
+https://en.wikipedia.org/wiki/Public_key_certificate
+
+https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+
+https://en.wikipedia.org/wiki/X.509
+
+https://en.wikipedia.org/wiki/Certificate_signing_request
+
+https://knowledge.digicert.com/solution/SO18140.html
+
+
+CSR: Certificate Signing Request
+DER: Distinguished Encoding Rules
+PEM: Privacy Enhanced Mail
+PKCS: Public-Key Cryptography Standards
+SHA: Secure Hash Algorithm
+SSL: Secure Socket Layer
+TLS: Transport Layer Security
+
+-noout option prevents display of the key in base 64 format, which means that only hexadecimal numbers are visible
+
+Main commands are
+req - certificate signing request
+rsa, genrsa - handling public and private keys
+dgst - message digest
+x509 - handling certificates
+enc - encryption
+
+################# OPENSSL ######################
+
+CREATE PRIVATE KEY
+genrsa -out private.pem 1024
+
+READ PRIVATE KEY
+rsa -in private.pem -text
+
+CREATE PUBLIC KEY
+rsa -in private.pem -out public.pem -pubout
+
+MESSAGE DIGEST
+openssl dgst -sha256 inputfile 
+openssl dgst -sha256 -out digest.bin inputfile
+
+SIGN FILE DIGEST
+
+VERIFY SIGNATURE
+
+
+ENCRYPTING WITH PASS
+enc -aes-256-cbc -e -in plain.txt -out encrypted.txt
+
+ENCRYPTING WITH PUBLIC KEY
+rsautl -encrypt -inkey public.pem -pubin -in plain.txt -out encrypted.txt
+
+Generate a Self-Signed Certificate
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out domain.crt
+openssl req -key key.pem -new -x509 -days 365 -out domain.crt
+
+Generate a Self-Signed Certificate from an Existing Private Key and CSR
+openssl x509 -in domain.csr -signkey key.pem -req -days 365 -out domain.crt
+
+CREATE SERTIFICATE SIGNING REQUEST (CSR)
+openssl req -newkey rsa:1024 -nodes -keyout key.pem -out domain.csr
+openssl req -key key.pem -new -out domain.csr
+
+Generate a CSR from an Existing Certificate and Private Key
+openssl x509 -in domain.crt -signkey key.pem -x509toreq -out domain.crt 
+
+View CSR Entries
+openssl req -in domain.csr -noout -text -verify
+
+View Certificate Entries
+openssl x509 -in domain.crt -noout -text
+
+
+Verify a Certificate was Signed by a CA
+--
+
+
+Convert PEM to DER (.crt and .cer to .der)
+openssl x509 -in domain.crt -outform der -out domain.crt
+
+Convert DER to PEM (.der to .crt or .cer)
+openssl x509 -inform der -in domain.der -out domain.crt
+
+Convert PEM to PKCS7
+
+
+Convert PKCS7 to PEM
+
+
+Convert PEM to PKCS12
+openssl pkcs12
+
+Convert PKCS12 to PEM
+openssl pkcs12
+
+
+
+######## JAVA KEYTOOL #######################
+
+View Keystore
+keytool -list -v -keystore "C:\Program Files\Java\jdk-12.0.1\lib\security\cacerts"
+
+Import Cert into Keystore
+keytool -importcert -file "C:\Users\Andrus\Desktop\openssl\domain.crt" -keystore cacerts -alias "Alias"

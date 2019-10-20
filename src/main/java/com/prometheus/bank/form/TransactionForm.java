@@ -6,16 +6,16 @@ import com.prometheus.bank.form.validator.constraint.TransactionAmountConstraint
 
 public class TransactionForm {
 
-    @NameConstraint
+    //@NameConstraint
     private String receiverName;
 
-    @NameConstraint
+    //@NameConstraint
     private String receiverAccount;
 
-    @InvoiceConstraint
+    //@InvoiceConstraint
     private long invoice;
 
-    @TransactionAmountConstraint
+    //@TransactionAmountConstraint
     private double amount;
 
     private String comment;

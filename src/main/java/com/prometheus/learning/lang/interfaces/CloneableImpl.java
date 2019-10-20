@@ -17,7 +17,7 @@ public class CloneableImpl implements Cloneable {
      * The clone() in the Object class only makes a shallow copy of the object,
      * that means it creates a new instance but initializes the same field objects.
      * To make a deep copy where all the fields are also new objects,
-     * a custom copy has to be implemented in this overridden clone() method.
+     * a impl copy has to be implemented in this overridden clone() method.
      */
     @Override
     public Object clone() throws CloneNotSupportedException {

@@ -23,7 +23,7 @@ public class SystemClass {
         PrintStream outputStream = System.out;
         OutputStream outputStreamErr = System.err;
 
-        /** It is also possible to set custom system intput and output streams */
+        /** It is also possible to set impl system intput and output streams */
         System.setIn(inputStream);
         System.setOut(outputStream);
         System.setErr(outputStream);

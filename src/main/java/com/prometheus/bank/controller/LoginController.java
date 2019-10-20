@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 @Controller
 @SessionAttributes("user")
@@ -43,7 +44,7 @@ public class LoginController {
 
 
     @RequestMapping("/authenticate")
-    public String authenticate(@ModelAttribute("loginForm") LoginForm loginForm, @ModelAttribute("user") User user1,  Model model, HttpServletResponse response) {
+    public String authenticate(@Valid @ModelAttribute("loginForm") LoginForm loginForm, @ModelAttribute("user") User user1, Model model, HttpServletResponse response) {
 
         User user = userService.getUser(loginForm.getUsername());
 

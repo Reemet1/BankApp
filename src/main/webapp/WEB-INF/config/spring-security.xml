@@ -15,11 +15,13 @@
     <!-- Scan for components under this package -->
     <context:component-scan base-package="com.prometheus.bank.security" />
     <context:component-scan base-package="com.prometheus.bank.dao" />
+    <context:component-scan base-package="com.prometheus.bank.security.auth" />
+    <beans:import resource="dispatcher-servlet.xml" />
     <!--<context:annotation-config /> -->
 
     <http pattern="/favicon.ico" security="none" />
 
-    <http auto-config="true" use-expressions="true" >
+    <http auto-config="true" use-expressions="true" access-decision-manager-ref="accessDecisionManager">
         <csrf disabled="true"/>
 
         <intercept-url pattern="/login" access="isAnonymous()"></intercept-url>
@@ -27,7 +29,7 @@
         <intercept-url pattern="/logout" access="isAnonymous()"></intercept-url>
         <!--<intercept-url pattern="/authenticate" access="isAnonymous()"></intercept-url> -->
         <intercept-url pattern="/adminhome" access="hasRole('ADMIN')"></intercept-url>
-        <!--<intercept-url pattern="/*" access="hasRole('ROLE_USER')"></intercept-url> -->
+        <!--<intercept-url pattern="/**" access="hasRole('USER')"></intercept-url> -->
         <form-login login-page="/login" login-processing-url="/authenticate"
             authentication-success-handler-ref="myAuthenticationSuccessHandler" />
         <logout
@@ -35,6 +37,17 @@
                 success-handler-ref="logoutSuccessHandler"
                 delete-cookies="JSESSIONID" />
     </http>
+
+    <beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased">
+        <beans:constructor-arg>
+            <beans:list>
+                <beans:bean class="org.springframework.security.web.access.expression.WebExpressionVoter"/>
+                <beans:bean class="org.springframework.security.access.vote.AuthenticatedVoter"/>
+                <beans:bean class="org.springframework.security.access.vote.RoleVoter"/>
+                <beans:bean class="com.prometheus.bank.security.auth.CustomAuthorizer"/>
+            </beans:list>
+        </beans:constructor-arg>
+    </beans:bean>
 
     <beans:bean id="myAuthenticationSuccessHandler"
                 class="com.prometheus.bank.security.auth.MySimpleUrlAuthenticationSuccessHandler" />
@@ -95,7 +108,7 @@
         <beans:property name="password" value="parool" />
 
     </beans:bean> -->
-
+    <!--
     <beans:bean id="sessionFactory"
           class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <beans:property name="dataSource" ref="myDataSource" />
@@ -116,7 +129,7 @@
                 <beans:value>mapping.hbm.xml</beans:value>
             </beans:list>
         </beans:property>
-    </beans:bean>
+    </beans:bean> -->
 
     <beans:bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <beans:property name="entityManagerFactory" ref="sessionFactory" />
@@ -124,14 +137,14 @@
     <tx:annotation-driven transaction-manager="txManager" />
 
     <!-- ############## DATA SOURCE CONFIGURATION ########### -->
-    <beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    <!--<beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
         <beans:property name="url" value="jdbc:mysql://localhost:3306/bank?useSSL=false&amp;serverTimezone=UTC" />
         <beans:property name="username" value="reemet" />
         <beans:property name="password" value="parool" />
 
-    </beans:bean>
+    </beans:bean> -->
 
 
 </beans:beans>

@@ -1,0 +1,1 @@
+keytool -list -v -keystore "C:\Program Files\Java\jdk-12.0.1\lib\security\cacerts" > keystore_output.txt -storepass changeit
