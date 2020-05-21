@@ -1,0 +1,195 @@
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"');
+
+#header {
+    width: 100%;
+    height: 200px;
+    display: block;
+    background-image: url('../img/header-background.jpg');
+    background-size: cover;
+}
+
+#content {
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-color: lightblue;
+    overflow:hidden;
+    overflow-y: scroll;
+}
+
+#footer {
+    width: 100%;
+    height: 200px;
+    display: block;
+    /*background:linear-gradient( rgba(0, 0, 0, 0.85) 100%, rgba(0, 0, 0, 0.85)100%),url("/resources/img/footer-background.jpg") no-repeat; */
+    background-color: #2b2f36;
+    background-size: 100% 100%;
+    border-top: 2px solid white;
+}
+
+
+/* ########### LOGIN FORM ################ */
+
+* {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+    padding: 10px;
+    background-color: #262626;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+a > .icon {
+    background: transparent;
+}
+
+/* Style the input fields */
+.input-field {
+    display:inline-block;
+    width: 70%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+form {
+    display: block;
+    width: 30%;
+    margin: auto;
+    border: 2px solid black;
+    background-color: rgba(54, 111, 135, 0.7);
+    text-align: center;
+}
+
+/* ################################### */
+
+
+/* ################# MENU ################### */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background:linear-gradient( rgba(0, 0, 0, 0.85) 100%, rgba(0, 0, 0, 0.85)100%),url("/resources/img/footer-background.jpg") no-repeat; */
+    background-color: #2b2f36;
+    background-size: 100% 100%;
+    border: 2px solid white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: black;
+}
+
+/* ############################################# */
+
+/* #################### TABLES ##################### */
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    background-color: rgba(54, 111, 135, 0.7);
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: rgba(54, 111, 135, 0.9)}
+
+table tr:hover {background-color: rgba(27, 55, 99, 1);}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2b2f36;
+    color: white;
+}
+
+#homecontent {
+    background-image: url('../img/mainpage-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+#paymentcontent {
+    background-image: url('../img/payment-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#loanscontent {
+    background-image: url('../img/loan-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#historycontent {
+    background-image: url('../img/history-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#cardscontent {
+    background-image: url('../img/cards-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#accountscontent {
+    background-image: url('../img/account-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* ############################### */
